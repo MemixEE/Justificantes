@@ -2,7 +2,7 @@
 	require_once("header.inc.php");
 ?>
 	<br />
-
+<h1>Otra prueba</h1>
   <div>
     <form action="insertar.php" id="formulario" method="POST" enctype="multipart/form-data">
       <h4>Numero de cuenta</h4>
