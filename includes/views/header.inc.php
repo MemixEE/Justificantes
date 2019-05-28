@@ -10,6 +10,7 @@
 	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 	crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
 </head>
 <script>
 function verifica(ruta){
@@ -48,6 +49,7 @@ function verifica(ruta){
         <h1 class="title">
           Universidad de Colima
         </h1>
+				<p>Prueba git</p>
         <h2 class="subtitle">
           Facultad de Telematica
         </h2>
