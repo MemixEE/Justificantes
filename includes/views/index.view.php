@@ -5,6 +5,8 @@
 
 
   <div class="container">
+  <div>
+
     <form action="insertar.php" id="formulario" method="POST" enctype="multipart/form-data">
       <h4>Numero de cuenta</h4>
       <input class="form-control" type="text" name="numeroDeCuenta">

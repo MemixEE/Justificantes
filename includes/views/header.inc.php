@@ -50,6 +50,21 @@ function verifica(ruta){
 		}
 </script>
 <body>
+<<<<<<< HEAD
 	<div class="jumbotron text-center">
  		<h2>Control de Justificantes</h2>
 	</div>
+=======
+	<section class="hero is-medium is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Universidad de Colima
+        </h1>
+				<p>Prueba git</p>
+        <h2 class="subtitle">
+          Facultad de Telematica
+        </h2>
+      </div>
+    </div>
+>>>>>>> a0978b0fe8ee30bf09a6997b17d90029b1efae96
