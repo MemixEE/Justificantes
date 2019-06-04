@@ -3,14 +3,22 @@
 <head>
 	<meta charset="utf-8">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>
+
 <script
 	src="https://code.jquery.com/jquery-2.2.4.min.js"
 	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-	crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+	crossorigin="anonymous">
+</script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 </head>
+
 <script>
 function verifica(ruta){
 			var a= confirm("Borrar todo?");
@@ -42,14 +50,6 @@ function verifica(ruta){
 		}
 </script>
 <body>
-	<section class="hero is-medium is-primary">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          Universidad de Colima
-        </h1>
-        <h2 class="subtitle">
-          Facultad de Telematica
-        </h2>
-      </div>
-    </div>
+	<div class="jumbotron text-center">
+ 		<h2>Control de Justificantes</h2>
+	</div>

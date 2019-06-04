@@ -2,16 +2,31 @@
 	require_once("header.inc.php");
 ?>
 	<br />
-<h1>Otra prueba</h1>
-  <div>
+
+
+  <div class="container">
     <form action="insertar.php" id="formulario" method="POST" enctype="multipart/form-data">
       <h4>Numero de cuenta</h4>
-      <input type="text" name="numeroDeCuenta"><br>
-      <p>Fecha</p>
-      <input type="date" name="fechaVigencia"> &nbsp;
-      <p><input type="date" name="fechaInicial" > &nbsp;A &nbsp; <input type="date" name="fechaFinal"></p>
-      <input   type="email" name="correoTutor" placeholder="@gmail.com">
+      <input class="form-control" type="text" name="numeroDeCuenta">
+      <!--<input type="text" name="numeroDeCuenta"><br>-->
+
+      <h5>Fecha</h5>
+      <input class="form-control" type="date" name="fechaVigencia">&nbsp;
+      <!--<input type="date" name="fechaVigencia"> &nbsp;-->
+
+      <h5>De</h5>
+      <input class="form-control" type="date" name="fechaInicial"> &nbsp;
+
+      <h5>A</h5>
+      <input class="form-control" type="date" name="fechaFinal"> &nbsp;
+      <!--<p><input type="date" name="fechaInicial" > &nbsp;A &nbsp; <input type="date" name="fechaFinal"></p>-->
+
+      <h5>Tutor</h5>
+      <input class="form-control" type="email" name="correoTutor" placeholder="@gmail.com">
+      <!--<input type="email" name="correoTutor" placeholder="@gmail.com"> -->
+
       <input  type="email" name="correoCordinador" placeholder="@gmail.com">
+
       <p><select name="motivo" >
           <option value="enfermedad">Enfermedad</option>
 
@@ -24,6 +39,8 @@
         <input type="submit" value="enviar" name="enviar">
     </form>
   </div>
+
+
 <div>
   <table>
   	  <thead>
