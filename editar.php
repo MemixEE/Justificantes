@@ -2,11 +2,11 @@
 
 // Initialize site configuration
 require_once('includes/config.inc.php');
-if ($_SERVER["REQUEST_METHOD"]='GET') {
-	if (isset($_GET['ida']) && intval($_GET['ida'])) {
-	$usrEdit=Justificante::getById($_GET['ida']);
-	echo json_encode($usrEdit);
-	}
+if ($_SERVER['REQUEST_METHOD'] = 'GET'){
+  if (isset($_GET['id']) && intval($_GET['id'])) {
+    $objeto = Justificante::getById($_GET['id']);
+    echo(json_encode($objeto));
+    echo(json_encode($objeto->numeroDeCuenta));
+  }
 }
-redirect_to('index.php');
- ?>
+require_once(VIEW_PATH.'update.view.php');

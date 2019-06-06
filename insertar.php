@@ -63,7 +63,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $agregaj ->correoCordinador=$correoCordinador;
         $agregaj ->motivo=$motivo;
         $agregaj ->descripcion=$descripcion;
-        $agregaj ->evidencia=$nombre;
+        $agregaj ->evidencia="prueba.jpg";
         $agregaj ->status=$status;
 
         $agregaj ->save();
@@ -101,7 +101,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 
-
-
-redirect_to('index.php')
+redirect_to('')
 ?>

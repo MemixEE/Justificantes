@@ -109,7 +109,7 @@ class Justificante {
 
 		// Build database query
 		$sql = "insert into justificante (numeroDeCuenta,fechaVigencia,fechaInicial, fechaFinal,correoTutor,correoCordinador,motivo,descripcion,evidencia,status) values (?,?,?,?,?,?,?,?,?,?)";
-     
+
 		// Open database connection
 		$database = new Database();
 
@@ -157,7 +157,7 @@ class Justificante {
 		if ($statement->prepare($sql)) {
 
 			// Bind parameters
-			$statement->bind_param('issssssssssi',$this->numeroDeCuenta, $this->fechaVigencia, $this->fechaInicial, $this->fechaFinal, $this->correoTutor, $this->correoCordinador, $this->motivo, $this->descripcion, $this->evidencia, $this->status,$this->id);
+			$statement->bind_param('isssssssssi',$this->numeroDeCuenta, $this->fechaVigencia, $this->fechaInicial, $this->fechaFinal, $this->correoTutor, $this->correoCordinador, $this->motivo, $this->descripcion, $this->evidencia, $this->status,$this->id);
 
 			// Execute statement
 			$statement->execute();

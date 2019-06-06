@@ -1,49 +1,8 @@
 <?php
 	require_once("header.inc.php");
 ?>
-	<br />
 
-
-  <div class="container">
-  <div>
-
-    <form action="insertar.php" id="formulario" method="POST" enctype="multipart/form-data">
-      <h4>Numero de cuenta</h4>
-      <input class="form-control" type="text" name="numeroDeCuenta">
-      <!--<input type="text" name="numeroDeCuenta"><br>-->
-
-      <h5>Fecha</h5>
-      <input class="form-control" type="date" name="fechaVigencia">&nbsp;
-      <!--<input type="date" name="fechaVigencia"> &nbsp;-->
-
-      <h5>De</h5>
-      <input class="form-control" type="date" name="fechaInicial"> &nbsp;
-
-      <h5>A</h5>
-      <input class="form-control" type="date" name="fechaFinal"> &nbsp;
-      <!--<p><input type="date" name="fechaInicial" > &nbsp;A &nbsp; <input type="date" name="fechaFinal"></p>-->
-
-      <h5>Tutor</h5>
-      <input class="form-control" type="email" name="correoTutor" placeholder="@gmail.com">
-      <!--<input type="email" name="correoTutor" placeholder="@gmail.com"> -->
-
-      <input  type="email" name="correoCordinador" placeholder="@gmail.com">
-
-      <p><select name="motivo" >
-          <option value="enfermedad">Enfermedad</option>
-
-          <option value="Viaje">viaje</option>
-        </select>
-      </p>
-        <TEXTAREA rows="5" cols="30" name="descripcion">Descripcion...</TEXTAREA>
-        <p><input type="file" name="evidencia"></p>
-        <input type="text" name="status" ><br>
-        <input type="submit" value="enviar" name="enviar">
-    </form>
-  </div>
-
-
-<div>
+<a href="includes/views/insert.view.php">Insertar</a>
   <table>
   	  <thead>
   	    <tr>
@@ -77,7 +36,7 @@
               <td><?php echo $j->evidencia;?></td>
                <td><?php echo $j->status;?></td>
 
-  	      <td><button onclick="edit($(this).val())" value="<?php echo $j->id; ?>" >Editar</button>
+  	      <td> <a href="editar.php?id=<?php echo $j->id; ?>" value="<?php echo $j->id; ?>" >Editar</a>
               	<button value="<?php echo $j->id;?>" onclick="verifica('borrar.php?id=<?php echo $j->id; ?>')">Borrar</button>
           </td>
         	    </tr>
@@ -86,47 +45,38 @@
    </tbody>
    </table>
 </div>
-
-
-<div class="modal" id='addUsuario'>
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Agregar</p>
-      <button class="delete" aria-label="close" onclick="$('#addUsuario').removeClass('is-active');"></button>
-    </header>
-    <section class="modal-card-body">
-          <form action="editar.php" id="form" method="get">
-            <h4>Numero de cuenta</h4>
-            <input type="text" name="numeroDeCuenta"><br>
-            <p>Fecha</p>
-            <input type="date" name="fechaVigencia"> &nbsp;
-            <p><input type="date" name="fechaInicial" > &nbsp;A &nbsp; <input type="date" name="fechaFinal"></p>
-            <input   type="email" name="correoTutor" placeholder="@gmail.com">
-            <input  type="email" name="correoCordinador" placeholder="@gmail.com">
-            <p><select name="motivo" >
-                <option value="enfermedad">Enfermedad</option>
-                <option value="personal">Personal</option>
-                <option value="Viaje">viaje</option>
-              </select>
-            </p>
-              <TEXTAREA rows="5" cols="30" name="descripcion">Descripcion...</TEXTAREA>
-              <p><input type="file" name="evidencia"></p>
-              <input type="text" name="status" ><br>
-              <input type="submit" value="enviar" name="enviar">
-
-
-    </section>
-    <footer class="modal-card-foot">
-      <button class="button is-success">Guardar</button>
-     <input type="hidden" name="id" id="id">
-    </form>
-
-    <button class="button" onclick="$('#addUsuario').removeClass('is-active');" >Cancelar</button>
-      </footer>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1>que onda</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
 </div>
-	<br />
+
+	<script>
+
+		function update(x){
+		console.log(x);
+		$.get( "editar.php", { id: x } )
+			.done(function( data ) {
+				console.log(data);
+				var usr = JSON.parse(data);
+				console.log(usr);
+			});
+	}
+	</script>
 <?php
 	require_once("footer.inc.php");
 ?>
