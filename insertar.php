@@ -13,7 +13,7 @@ if (isset($_FILES['evidencia']['tmp_name']) && strlen($_FILES['evidencia']['tmp_
 			$nombre=str_replace($cadena_1, $cadena_2, $nombre);
 			$nombre=preg_replace('/[^0-9a-z\.\_\-]/i','',$nombre);
 			$nombre=number_format(rand(1,9999),0,'','')."_".$nombre;
-		  $destino = '/opt/lampp/htdocs/Justificantes/img';
+		  $destino = 'C:/xampp/htdocs/Justificantes/img';
 
 			$tamano = intval($_FILES['evidencia']['size']);
 
@@ -101,5 +101,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
 
-redirect_to('')
+redirect_to('index.php')
 ?>
