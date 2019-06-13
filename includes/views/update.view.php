@@ -1,7 +1,10 @@
 <?php
 	require_once("header.inc.php");
 ?>
-
+ <!-- update.view.php es una formulario el cual nos
+			permite actualizar x registro de la BD, en cada uno de los values
+			contiene los atributos del registro obtenidos en editar.php
+-->
 <div class="container">
   <form action="/Justificantes/insertar.php" id="formulario" method="POST" enctype="multipart/form-data">
     <h4>Numero de cuenta</h4>

@@ -1,5 +1,5 @@
 <?php
-
+//editar.php sirve obtiene el  id del usuario a editar y lo regresa para posteriormente usarlo para eliminar.
 // Initialize site configuration
 require_once('includes/config.inc.php');
 if ($_SERVER["REQUEST_METHOD"]='GET') {

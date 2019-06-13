@@ -1,7 +1,12 @@
 <?php
 
 require_once('includes/config.inc.php');
-
+/*
+	En insetar.php sirve para agregar nuevos regustros a la base de datos
+	A su vez tambien sirve para actualizar x registro y mas aparte tiene un metodo
+	el cual nos permite insetar imagenes
+*/
+//Medodo para insertar imagenes
 print_r($_POST);
 if (isset($_FILES['evidencia']['tmp_name']) && strlen($_FILES['evidencia']['tmp_name'])>4)
 	 	{
