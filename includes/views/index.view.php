@@ -2,8 +2,9 @@
 	require_once("header.inc.php");
 ?>
 
-<a href="includes/views/insert.view.php">Insertar</a>
-  <table>
+<div class="container-fluid">
+	<a class="btn btn-success btn-lg float-right" href="includes/views/insert.view.php">Agregar</a>
+  <table class="table table-striped">
   	  <thead>
   	    <tr>
   	       	<th>#</th>
@@ -36,34 +37,16 @@
               <td><?php echo $j->evidencia;?></td>
                <td><?php echo $j->status;?></td>
 
-  	      <td> <a href="editar.php?id=<?php echo $j->id; ?>" value="<?php echo $j->id; ?>" >Editar</a>
-              	<button value="<?php echo $j->id;?>" onclick="verifica('borrar.php?id=<?php echo $j->id; ?>')">Borrar</button>
+  	      <td> <a class="btn btn-primary" href="editar.php?id=<?php echo $j->id; ?>" value="<?php echo $j->id; ?>" >Editar</a>&nbsp;
+              	<button class="btn btn-danger" value="<?php echo $j->id;?>" onclick="verifica('borrar.php?id=<?php echo $j->id; ?>')">Borrar</button>
           </td>
         	    </tr>
         <?php $i++;}
         ?>
    </tbody>
    </table>
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h1>que onda</h1>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 
 	<script>
 
@@ -77,6 +60,8 @@
 			});
 	}
 	</script>
+
+</div>
 <?php
 	require_once("footer.inc.php");
 ?>
